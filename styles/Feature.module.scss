@@ -1,0 +1,13 @@
+@use 'var';
+
+.main {
+    @include var.flex;
+    z-index: 99;
+    padding: 10px 0;
+    h1{
+        font-size: 1cm;
+    }
+    p {
+        margin-top: 1%;
+    }
+}

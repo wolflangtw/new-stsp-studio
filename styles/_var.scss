@@ -1,0 +1,10 @@
+$color: rgb(1,112,254);
+$darkColor: rgb(0,0,0,0.6);
+
+@mixin flex() {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 900;
+}

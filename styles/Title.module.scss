@@ -1,0 +1,87 @@
+@use 'var';
+
+@font-face {
+    font-family: "Minecraft";
+    src: url("./fonts/MinecraftEvenings-lgvPd.ttf");
+    font-weight: 900;
+    font-style: normal;
+}
+
+.main {
+    position: relative;
+    @include var.flex;
+    flex-direction: column;
+    font-size: 1cm;
+    font-weight: 900;
+    z-index: 99;
+    min-height: 100vh;
+    opacity: 0;
+    h1{
+        z-index: 20;
+        color:white;
+    }
+    h2{
+        @extend h1;
+        font-size: 22px;
+        font-family: 'Minecraft'
+    }
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        filter: brightness(50%);
+    }
+    a {
+        text-decoration: none;
+        border-radius: 10px;
+    }
+    .btn{
+        z-index: 99;
+        margin-top: 5%;
+        color:white;
+        font-size: 20px;
+        border: 5px solid pink;
+        padding: 5px 20px;
+        cursor: pointer;
+        transition: 1s;
+        animation: rainbow 5s ease-in-out;
+        animation-iteration-count: infinite;
+        &:hover {
+            border: 5px solid white;
+        }
+    }
+    @keyframes rainbow {
+        0%{
+            border: 5px solid var.$color;
+        }
+        50%{
+            border: 5px solid blue;
+        }
+        100%{
+            border: 5px solid var.$color;
+        }
+    }
+}
+.show {
+    opacity: 1;
+}
+.show.main{
+    opacity: 1;
+    transition: 0.5s;
+}
+.up {
+    animation: 3s op;
+    transition: 2s;
+}
+@keyframes op {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100%{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,27 @@
+@use 'var';
+
+@font-face {
+    font-family: "Minecraft";
+    src: url("./fonts/MinecraftEvenings-lgvPd.ttf");
+    font-weight: 900;
+    font-style: normal;
+}
+
+.main {
+    display:flex;
+    align-items: center;
+    background-color: var.$darkColor;
+    min-height: 60px;
+    max-height: 60px;
+
+    h1 {
+        display:inline-flex;
+        color:white;
+        font-family: 'Minecraft';
+        font-size: 45px;
+        font-weight: 600;
+        width: 300px;
+        margin-right: 0;
+        margin-left: 5%;
+    }
+}
